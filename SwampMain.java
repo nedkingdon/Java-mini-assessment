@@ -43,7 +43,7 @@ public class SwampMain {
 								+ Math.abs(currentP1.getEastWestLocation() - treasure.getEastWestT())));
 			}
 
-//			System.out.println("the treasure is at a bearing " + deg.getDegrees() + " degrees to you ");
+			System.out.println("the treasure is at a bearing " + deg.getDegrees() + " degrees to you ");
 //
 //			if (currentP1.getNorthSouthLocation() - treasure.getNorthSouthT() > 0) {
 //				System.out.println("you are " + (currentP1.getNorthSouthLocation() - treasure.getNorthSouthT())
@@ -67,10 +67,10 @@ public class SwampMain {
 //						+ "m West of the treasure");
 //			}
 
-			else {
-				System.out.println("you are directly North or South of the treasure");
-
-			}
+//			else {
+//				System.out.println("you are directly North or South of the treasure");
+//
+//			}
 
 			System.out.println("you are "
 					+ Math.round(Math.sqrt(Math.pow((currentP1.getEastWestLocation() - treasure.getEastWestT()), 2)
