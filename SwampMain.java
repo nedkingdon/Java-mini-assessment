@@ -79,6 +79,30 @@ public class SwampMain {
 
 			///////////////////////////////////// entry///////////////////////////////////////////////////////////////////////////////
 			for (;;) {
+				System.out.println("How lucky are you feeling? (low/medium/high): ");
+				Scanner sc = new Scanner(System.in);
+				String risk = sc.nextLine();
+
+				if (risk.equals("high")) {
+					game.setDistance((int) (Math.random() * 40 - 10));
+					break;
+				} else if (risk.equals("medium")) {
+					game.setDistance((int) (Math.random() * 20 + 0));
+					break;
+				} else if (risk.equals("low")) {
+					game.setDistance(((int) (Math.random() * 2 + 3)));
+					break;
+				} else {
+					System.out.println("Enter your luck properly this time!");
+				}
+			}
+			
+			
+			
+			
+			
+			
+			for (;;) {
 				System.out.println("Which direction would you like to go? (north/south/east/west): ");
 				Scanner sc = new Scanner(System.in);
 				String direction = sc.nextLine();
@@ -105,24 +129,7 @@ public class SwampMain {
 					System.out.println("enter a proper direction!");
 				}
 			}
-			for (;;) {
-				System.out.println("How lucky are you feeling? (low/medium/high): ");
-				Scanner sc = new Scanner(System.in);
-				String risk = sc.nextLine();
-
-				if (risk.equals("high")) {
-					game.setDistance((int) (Math.random() * 40 - 10));
-					break;
-				} else if (risk.equals("medium")) {
-					game.setDistance((int) (Math.random() * 20 + 0));
-					break;
-				} else if (risk.equals("low")) {
-					game.setDistance(((int) (Math.random() * 2 + 3)));
-					break;
-				} else {
-					System.out.println("Enter your luck properly this time!");
-				}
-			}
+			
 
 			if (game.getDistance() < 0) {
 				System.out.println("strong winds blow you backwards you travel " + game.getDistance() + "m");
